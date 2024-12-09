@@ -6,7 +6,7 @@
 /*   By: syanak <syanak@student.42kocaeli.com.tr >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:08:10 by syanak            #+#    #+#             */
-/*   Updated: 2024/12/09 20:35:38 by syanak           ###   ########.fr       */
+/*   Updated: 2024/12/09 20:43:02 by syanak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,19 @@ char	*ft_substr(const char *stash, unsigned int start, size_t len)
 {
 	char	*ret;
 	int		stash_len;
+	size_t	i;
 
 	stash_len = ft_strlen(stash);
 	if (!stash || len <= 0)
 		return (NULL);
 	if (len > stash_len)
 		len = stash_len;
+	ret = malloc((len + 1) * sizeof(char));
+	if (!ret)
+		return (NULL);
+	while (start < stash_len && i < len)
+		ret[i++] = stash[start++];
+	return (ret[i] = 0, ret);
 }
 
 int	ft_strlen(char *stash)
