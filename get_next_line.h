@@ -24,5 +24,11 @@ char	*ft_strjoin(char *buff, char *stash);
 void	*ft_free_stash(char **stash);
 char	*ft_substr(const char *stash, unsigned int start, size_t len);
 int		ft_strlen(char *stash);
+char	*ft_strdub(char *buff);
+char	*ft_strjoin(char *buff, char *stash);
+void	*ft_free_stash(char **stash);
+char	*ft_substr(const char *stash, unsigned int start, size_t len);
+int     ft_strlen(char *stash);
+
 
 #endif

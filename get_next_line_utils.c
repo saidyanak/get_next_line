@@ -57,7 +57,7 @@ char	*ft_substr(const char *stash, unsigned int start, size_t len)
 	int		stash_len;
 	size_t	i;
 
-	stash_len = ft_strlen(stash);
+	stash_len = ft_strlen((char *)stash);
 	if (!stash || len <= 0)
 		return (NULL);
 	if (len > stash_len)
