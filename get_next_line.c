@@ -23,7 +23,7 @@ static char	*add_stash(char *buff, char *stash)
 	ret = 0;
 	if (!stash && buff)
 	{
-		ret = ft_strdub(buff);
+		ret = ft_strdup(buff);
 		if (!ret)
 			return (NULL);
 		return (ret);
@@ -35,6 +35,8 @@ static char	*add_stash(char *buff, char *stash)
 
 static int	find_nl(char *stash)
 {
+	if (!stash)
+		return (0);
 	while (*stash++ != '\n')
 	{
 		if (*stash == '\n')
@@ -58,7 +60,10 @@ static char	*ft_extract_line(char *stash)
 		return (NULL);
 	j = 0;
 	while (j < i + 1)
-		temp[j++] = stash[i];
+	{
+		temp[j] = stash[j];
+		j++;
+	}
 	temp[j] = 0;
 	return (temp);
 }
@@ -95,7 +100,7 @@ char	*get_next_line(int fd)
 		readed = read(fd, buff, BUFFER_SIZE);
 		if (readed == -1)
 			return (ft_free_stash(&stash), NULL);
-		buff[BUFFER_SIZE] = 0;
+		buff[readed] = 0;
 		stash = add_stash(buff, stash);
 		if (find_nl(stash))
 		{
@@ -107,7 +112,38 @@ char	*get_next_line(int fd)
 	}
 	return (ft_free_stash(&stash), line);
 }
-int	main(void)
+
+#include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(void)
 {
-	return (0);
+    // Test dosyasını açıyoruz
+    int fd = open("test.txt", O_RDONLY);
+    if (fd < 0)
+    {
+        perror("Error opening file");
+        return 1;
+    }
+
+    // Satırları okuyup yazdırıyoruz
+    char *line;
+	line = get_next_line(fd);
+    while (line != NULL)
+    {
+        printf("Read line: %s", line);
+        free(line); // Okunan satırı bellekte sızıntı olmaması için serbest bırakıyoruz
+    }
+
+    // Dosyayı kapatıyoruz
+    if (close(fd) < 0)
+    {
+        perror("Error closing file");
+        return 1;
+    }
+
+    return 0;
 }
