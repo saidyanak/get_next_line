@@ -6,7 +6,7 @@
 /*   By: syanak <syanak@student.42kocaeli.com.tr >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 18:07:55 by syanak            #+#    #+#             */
-/*   Updated: 2024/12/16 17:03:37 by syanak           ###   ########.fr       */
+/*   Updated: 2024/12/16 17:09:13 by syanak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ static int	find_nl(char *stash)
 	}
 	return (0);
 }
+
 static char	*ft_extract_line(char *stash)
 {
 	char	*temp;
@@ -71,6 +72,7 @@ static char	*ft_extract_line(char *stash)
 	temp[j] = 0;
 	return (temp);
 }
+
 static char	*ft_recreate_stash(char *stash)
 {
 	char	*tmp;

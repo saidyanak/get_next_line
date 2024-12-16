@@ -6,7 +6,7 @@
 /*   By: syanak <syanak@student.42kocaeli.com.tr >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:08:10 by syanak            #+#    #+#             */
-/*   Updated: 2024/12/16 17:03:38 by syanak           ###   ########.fr       */
+/*   Updated: 2024/12/16 17:09:13 by syanak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strdup(char *buff)
 		ret[i++] = *buff++;
 	return (ret[i] = 0, ret);
 }
+
 char	*ft_strjoin(char *buff, char *stash)
 {
 	char	*ret;
