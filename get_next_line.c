@@ -6,13 +6,11 @@
 /*   By: syanak <syanak@student.42kocaeli.com.tr >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 18:07:55 by syanak            #+#    #+#             */
-/*   Updated: 2024/12/16 17:09:13 by syanak           ###   ########.fr       */
+/*   Updated: 2024/12/16 17:14:47 by syanak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
