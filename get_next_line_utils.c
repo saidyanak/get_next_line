@@ -6,7 +6,7 @@
 /*   By: syanak <syanak@student.42kocaeli.com.tr >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:08:10 by syanak            #+#    #+#             */
-/*   Updated: 2024/12/09 20:43:02 by syanak           ###   ########.fr       */
+/*   Updated: 2024/12/16 16:43:21 by syanak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,28 @@ char	*ft_strjoin(char *buff, char *stash)
 	return (ret[i] = 0, ret);
 }
 
-void	*ft_free_stash(char **stash)
+void	*ft_free_stash(char **stash, int line)
 {
-	if (stash && *stash)
+	char	*ret;
+
+	ret = 0;
+	if (!stash)
+		return (NULL);
+	if (line == 0)
 	{
+		if (*stash)
+		{
+			free(*stash);
+			*stash = NULL;
+		}
+		return (NULL);
+	}
+	else
+	{
+		ret = ft_strdup(*stash);
 		free(*stash);
 		stash = NULL;
+		return (ret);
 	}
 	return (NULL);
 }

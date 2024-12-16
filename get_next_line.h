@@ -6,7 +6,7 @@
 /*   By: syanak <syanak@student.42kocaeli.com.tr >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:43:24 by syanak            #+#    #+#             */
-/*   Updated: 2024/12/09 20:29:12 by syanak           ###   ########.fr       */
+/*   Updated: 2024/12/16 16:43:20 by syanak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,8 @@
 char	*get_next_line(int fd);
 char	*ft_strdup(char *buff);
 char	*ft_strjoin(char *buff, char *stash);
-void	*ft_free_stash(char **stash);
+void	*ft_free_stash(char **stash, int line);
 char	*ft_substr(const char *stash, unsigned int start, size_t len);
 int		ft_strlen(char *stash);
-char	*ft_strjoin(char *buff, char *stash);
-void	*ft_free_stash(char **stash);
-char	*ft_substr(const char *stash, unsigned int start, size_t len);
-int     ft_strlen(char *stash);
-
 
 #endif
