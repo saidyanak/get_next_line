@@ -1,0 +1,16 @@
+[1224/185628.257682:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[90m[main 2024-12-24T15:56:30.537Z][0m update#setState idle
+[90m[main 2024-12-24T15:56:48.156Z][0m Extension host with pid 420523 exited with code: 0, signal: unknown.
+[91m[main 2024-12-24T15:56:48.160Z][0m [UtilityProcessWorker]: terminated unexpectedly with code 82, signal: unknown
+[90m[main 2024-12-24T15:57:00.540Z][0m update#setState checking for updates
+[90m[main 2024-12-24T15:57:00.552Z][0m update#setState available for download
+[1224/190628.257789:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/190628.257841:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/190628.260673:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/191128.257951:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/192628.258140:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/194128.258370:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/195628.258851:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[1224/201128.259218:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
+[420311:1224/201548.053389:ERROR:atom_cache.cc(230)] Add code/file-list to kAtomsToCache
+[1224/202628.259541:ERROR:file_io_posix.cc(153)] open /home/syanak/.config/Code/Crashpad/pending/66ce4f51-a69d-441d-aa56-ddad0d9dc4a0.lock: File exists (17)
