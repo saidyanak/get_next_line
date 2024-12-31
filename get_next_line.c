@@ -115,7 +115,12 @@ char	*get_next_line(int fd)
 int	main(void)
 {
 	char	*prt;
-
-	prt = get_next_line(5);
-	printf("%s",prt);
+	int fd = open("test.txt",O_RDONLY );
+	prt = get_next_line(fd);
+	while (prt != NULL)
+	{
+		printf("%s",prt);
+		free(prt);
+		prt = get_next_line(fd);
+	}
 }
